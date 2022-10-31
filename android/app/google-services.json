@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1024141360739",
+    "project_id": "veille-2",
+    "storage_bucket": "veille-2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1024141360739:android:9fa55a6baeae996660c256",
+        "android_client_info": {
+          "package_name": "com.veille2cli"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1024141360739-4upukslqqkof2i4b500l2jkuhe7k4uqf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCkjduLgvcYnNlBmHZnX3vLCPzPjEsC8ds"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1024141360739-4upukslqqkof2i4b500l2jkuhe7k4uqf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
