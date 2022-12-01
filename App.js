@@ -8,6 +8,8 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import HomeScreen from './components/HomeScreen';
 import AddFriend from './components/AddFriend';
 import MessageScreen from './components/MessageScreen';
+import CallScreen from './components/screens/CallScreen';
+import JoinScreen from './components/screens/JoinScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -45,7 +47,24 @@ const App = () => {
         <Stack.Screen
           name="MessageScreen"
           component={MessageScreen}
-          options={({route}) => ({title: route.params.friend})}
+          options={({navigation, route}) => ({
+            title: route.params.friend,
+            headerRight: () => <Button title="call" />,
+          })}
+        />
+        <Stack.Screen
+          name="CallScreen"
+          component={CallScreen}
+          options={({navigation, route}) => ({
+            title: route.params.friend,
+          })}
+        />
+        <Stack.Screen
+          name="AnswerScreen"
+          component={JoinScreen}
+          options={({navigation, route}) => ({
+            title: route.params.friend,
+          })}
         />
       </Stack.Navigator>
     </NavigationContainer>

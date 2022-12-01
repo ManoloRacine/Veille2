@@ -16,6 +16,7 @@ import auth from '@react-native-firebase/auth';
 import firestore from '@react-native-firebase/firestore';
 import {firebase} from '@react-native-firebase/firestore';
 import {useHeaderHeight} from '@react-navigation/elements';
+import {Button} from '@react-native-material/core';
 
 const MessageScreen = ({route, navigation}) => {
   const height = useHeaderHeight();
@@ -61,12 +62,26 @@ const MessageScreen = ({route, navigation}) => {
   const onResult = querySnapshot => {
     let messagesArray = [];
     querySnapshot.forEach(documentSnapshot => {
-      messagesArray.push({
-        data: documentSnapshot.data(),
-        id: documentSnapshot.id,
-      });
+      //console.log(documentSnapshot);
+      const data = documentSnapshot.data();
+      if (data) {
+        if (!data.timeStamp && documentSnapshot.metadata.hasPendingWrites) {
+          messagesArray.push({
+            data: {
+              ...documentSnapshot.data(),
+              timeStamp: firebase.firestore.Timestamp.now(),
+            },
+            id: documentSnapshot.id,
+          });
+        } else {
+          messagesArray.push({
+            data: documentSnapshot.data(),
+            id: documentSnapshot.id,
+          });
+        }
+      }
     });
-
+    console.log(messagesArray);
     setMessages(messagesArray);
   };
 
@@ -98,6 +113,27 @@ const MessageScreen = ({route, navigation}) => {
   };
 
   useEffect(() => {
+    navigation.setOptions({
+      headerRight: () => (
+        <View>
+          <Button
+            onPress={() =>
+              navigation.navigate('CallScreen', {
+                roomId: messagesId,
+              })
+            }
+          />
+          <Button
+            onPress={() =>
+              navigation.navigate('AnswerScreen', {
+                roomId: messagesId,
+              })
+            }
+          />
+        </View>
+      ),
+    });
+
     getMessagesId().then(response => {
       setMessagesId(response.data().messagesId);
       firestore()
