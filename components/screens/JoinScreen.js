@@ -20,7 +20,7 @@ const configuration = {
 };
 
 export default function JoinScreen({route}) {
-  let roomId = route.params.roomId;
+  const [roomId, setRoomId] = useState('');
 
   function onBackPress() {
     if (cachedLocalPC) {
@@ -40,6 +40,7 @@ export default function JoinScreen({route}) {
 
   useEffect(() => {
     // startLocalStream();
+    setRoomId(route.params.roomId);
   }, []);
 
   const startLocalStream = async () => {

@@ -113,27 +113,6 @@ const MessageScreen = ({route, navigation}) => {
   };
 
   useEffect(() => {
-    navigation.setOptions({
-      headerRight: () => (
-        <View>
-          <Button
-            onPress={() =>
-              navigation.navigate('CallScreen', {
-                roomId: messagesId,
-              })
-            }
-          />
-          <Button
-            onPress={() =>
-              navigation.navigate('AnswerScreen', {
-                roomId: messagesId,
-              })
-            }
-          />
-        </View>
-      ),
-    });
-
     getMessagesId().then(response => {
       setMessagesId(response.data().messagesId);
       firestore()
@@ -142,6 +121,27 @@ const MessageScreen = ({route, navigation}) => {
         .collection('textMessages')
         .orderBy('timeStamp', 'asc')
         .onSnapshot(onResult, onError);
+
+      navigation.setOptions({
+        headerRight: () => (
+          <View>
+            <Button
+              onPress={() =>
+                navigation.navigate('CallScreen', {
+                  roomId: messagesId,
+                })
+              }
+            />
+            <Button
+              onPress={() =>
+                navigation.navigate('AnswerScreen', {
+                  roomId: messagesId,
+                })
+              }
+            />
+          </View>
+        ),
+      });
     });
   }, []);
 

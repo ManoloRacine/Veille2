@@ -20,7 +20,7 @@ const configuration = {
 };
 
 export default function CallScreen({route}) {
-  let roomId = route.params.roomId;
+  const [roomId, setRoomId] = useState('');
 
   function onBackPress() {
     if (cachedLocalPC) {
@@ -41,6 +41,7 @@ export default function CallScreen({route}) {
 
   useEffect(() => {
     // startLocalStream();
+    setRoomId(route.params.roomId);
   }, []);
 
   const startLocalStream = async () => {
