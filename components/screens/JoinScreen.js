@@ -133,7 +133,6 @@ export default function JoinScreen({route}) {
   return (
     <>
       <Text style={styles.heading}>Join Screen</Text>
-      <Text style={styles.heading}>Room : {roomId}</Text>
 
       <View style={styles.callButtons}>
         <View styles={styles.buttonContainer}>

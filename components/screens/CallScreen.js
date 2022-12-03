@@ -136,7 +136,6 @@ export default function CallScreen({route}) {
   return (
     <>
       <Text style={styles.heading}>Call Screen</Text>
-      <Text style={styles.heading}>Room : {roomId}</Text>
 
       <View style={styles.callButtons}>
         <View styles={styles.buttonContainer}>

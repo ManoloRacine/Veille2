@@ -126,16 +126,18 @@ const MessageScreen = ({route, navigation}) => {
         headerRight: () => (
           <View>
             <Button
+              title="Call"
               onPress={() =>
                 navigation.navigate('CallScreen', {
-                  roomId: messagesId,
+                  roomId: response.data().messagesId,
                 })
               }
             />
             <Button
+              title="Answer"
               onPress={() =>
                 navigation.navigate('AnswerScreen', {
-                  roomId: messagesId,
+                  roomId: response.data().messagesId,
                 })
               }
             />

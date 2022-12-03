@@ -1082,12 +1082,12 @@
     "minimatch" "^3.0.4"
     "strip-json-comments" "^3.1.1"
 
-"@expo/config-plugins@^5.0.1":
-  "integrity" "sha512-1OfnsOrfeSkB0VZfT01UjQ5Uq6p+yYbq8yNkj0e99K/6NLHpyvIxj+5tZIV0nQXgkOcqBIABL2uA7lwB8CkaBQ=="
-  "resolved" "https://registry.npmjs.org/@expo/config-plugins/-/config-plugins-5.0.1.tgz"
-  "version" "5.0.1"
+"@expo/config-plugins@^5.0.4":
+  "integrity" "sha512-vzUcVpqOMs3h+hyRdhGwk+eGIOhXa5xYdd92yO17RMNHav3v/+ekMbs7XA2c3lepMO8Yd4/5hqmRw9ZTL6jGzg=="
+  "resolved" "https://registry.npmjs.org/@expo/config-plugins/-/config-plugins-5.0.4.tgz"
+  "version" "5.0.4"
   dependencies:
-    "@expo/config-types" "^46.0.0"
+    "@expo/config-types" "^47.0.0"
     "@expo/json-file" "8.2.36"
     "@expo/plist" "0.0.18"
     "@expo/sdk-runtime-versions" "^1.0.0"
@@ -1103,10 +1103,10 @@
     "xcode" "^3.0.1"
     "xml2js" "0.4.23"
 
-"@expo/config-types@^46.0.0":
-  "integrity" "sha512-PXkmOgNwRyBfgVT1HmFZhfh3Qm7WKKyV6mk3/5HJ/LzPh1t+Zs2JrWX8U2YncTLV1QzV7nV8tnkyvszzqnZEzQ=="
-  "resolved" "https://registry.npmjs.org/@expo/config-types/-/config-types-46.0.2.tgz"
-  "version" "46.0.2"
+"@expo/config-types@^47.0.0":
+  "integrity" "sha512-r0pWfuhkv7KIcXMUiNACJmJKKwlTBGMw9VZHNdppS8/0Nve8HZMTkNRFQzTHW1uH3pBj8jEXpyw/2vSWDHex9g=="
+  "resolved" "https://registry.npmjs.org/@expo/config-types/-/config-types-47.0.0.tgz"
+  "version" "47.0.0"
 
 "@expo/json-file@8.2.36":
   "integrity" "sha512-tOZfTiIFA5KmMpdW9KF7bc6CFiGjb0xnbieJhTGlHrLL+ps2G0OkqmuZ3pFEXBOMnJYUVpnSy++52LFxvpa5ZQ=="
@@ -1611,24 +1611,27 @@
   "resolved" "https://registry.npmjs.org/@react-native-community/eslint-plugin/-/eslint-plugin-1.2.0.tgz"
   "version" "1.2.0"
 
-"@react-native-firebase/app@^16.3.1", "@react-native-firebase/app@16.3.1", "@react-native-firebase/app@16.4.2":
-  "integrity" "sha512-puuIW23PmS3svYtqJfVvnsOd2I6vE3DPWTpYuv8e34K+D9iTUiBW6XbiRDqFefXP3QHKvTRJAqNpRtMGybf0Uw=="
-  "resolved" "https://registry.npmjs.org/@react-native-firebase/app/-/app-16.4.2.tgz"
-  "version" "16.4.2"
+"@react-native-firebase/app@^16.4.6", "@react-native-firebase/app@16.4.6":
+  "integrity" "sha512-rL/vhylwzj9ziKAqEOI6G3eIGiJRcI9dcM93+gG7pEv1mNBHKmhnuq9VPS8nR01qyI/PYWoKN6XecE0w7A7n4w=="
+  "resolved" "https://registry.npmjs.org/@react-native-firebase/app/-/app-16.4.6.tgz"
+  "version" "16.4.6"
   dependencies:
-    "@expo/config-plugins" "^5.0.1"
+    "@expo/config-plugins" "^5.0.4"
     "opencollective-postinstall" "^2.0.1"
     "superstruct" "^0.6.2"
 
-"@react-native-firebase/auth@^16.3.1":
-  "integrity" "sha512-zcN0SDzfs6+3AJAmca5ffwEkwEssTW7i2QMvvTzHRJmgVPJv2liWr18DHB+6kWM0tu9QvDhBN3cGml4uTWv49w=="
-  "resolved" "https://registry.npmjs.org/@react-native-firebase/auth/-/auth-16.3.1.tgz"
-  "version" "16.3.1"
+"@react-native-firebase/auth@^16.4.6":
+  "integrity" "sha512-le9SkPa7xNawHa58xyNE6ZzBLseVOz7LA1qYZDYrwqiVYZ6vGrHCiV9wRDmEz2MgQD2znigZnsUNd4p5RHvMWw=="
+  "resolved" "https://registry.npmjs.org/@react-native-firebase/auth/-/auth-16.4.6.tgz"
+  "version" "16.4.6"
+  dependencies:
+    "@expo/config-plugins" "^5.0.4"
+    "plist" "^3.0.5"
 
-"@react-native-firebase/firestore@^16.4.2":
-  "integrity" "sha512-mNHUzIukGLxaYKe8uXC20np4of/r08vntOaoIZn/waBY48aYEhGm/mnMuTdYgI0Qh9vVWT+3r3SvnlngXmt91w=="
-  "resolved" "https://registry.npmjs.org/@react-native-firebase/firestore/-/firestore-16.4.2.tgz"
-  "version" "16.4.2"
+"@react-native-firebase/firestore@^16.4.6":
+  "integrity" "sha512-8O0k0Usx908I5Ra+H2ALCxYDvmcvIL+dUYGRn+oUrnDkIL2crKU7QqV157phpC74tFMMWXIaUuFrqtGQgXBCww=="
+  "resolved" "https://registry.npmjs.org/@react-native-firebase/firestore/-/firestore-16.4.6.tgz"
+  "version" "16.4.6"
 
 "@react-native-material/core@^1.3.7":
   "integrity" "sha512-N5d/zKrmL3+fVyWsc/jFRxsDl59N5t3tYx9RlxhV04tQlcFKo9UlyBqCWDZFlxrkLrq3JY5zTRCMJAM3yvOz5w=="
@@ -1963,9 +1966,9 @@
     "eslint-visitor-keys" "^1.1.0"
 
 "@xmldom/xmldom@~0.7.0":
-  "integrity" "sha512-RwEdIYho2kjbSZ7fpvhkHy5wk1Y3x0O6e/EHL3/SoiAfFWH+yhV2/XZQvsBoAeGRNFwgScJS/gRZv+uIwoj7yA=="
-  "resolved" "https://registry.npmjs.org/@xmldom/xmldom/-/xmldom-0.7.7.tgz"
-  "version" "0.7.7"
+  "integrity" "sha512-yceMpm/xd4W2a85iqZyO09gTnHvXF6pyiWjD2jcOJs7hRoZtNNOO1eJlhHj1ixA+xip2hOyGn+LgcvLCMo5zXA=="
+  "resolved" "https://registry.npmjs.org/@xmldom/xmldom/-/xmldom-0.7.9.tgz"
+  "version" "0.7.9"
 
 "abab@^2.0.3", "abab@^2.0.5":
   "integrity" "sha512-j2afSsaIENvHZN2B8GOpF566vZ5WVk5opAiMTvWgaQT8DkbOqsTfvNAvHoRGU2zzP8cPoqys+xHTRDWW8L+/BA=="
@@ -4817,6 +4820,11 @@
     "@jest/core" "^26.6.3"
     "import-local" "^3.0.2"
     "jest-cli" "^26.6.3"
+
+"jetifier@^2.0.0":
+  "integrity" "sha512-J4Au9KuT74te+PCCCHKgAjyLlEa+2VyIAEPNCdE5aNkAJ6FAJcAqcdzEkSnzNksIa9NkGmC4tPiClk2e7tCJuQ=="
+  "resolved" "https://registry.npmjs.org/jetifier/-/jetifier-2.0.0.tgz"
+  "version" "2.0.0"
 
 "joi@^17.2.1":
   "integrity" "sha512-tPzkTJHZQjSFCc842QpdVpOZ9LI2txApboNUbW70qgnRB14Lzl+oWQOPdF2N4yqyiY14wBGe8lc7f/2hZxbGmw=="
